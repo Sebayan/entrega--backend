@@ -1,0 +1,354 @@
+Statistical profiling result from isolate-000002336964C000-7848-v8.log, (1910 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1443   75.5%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    457   23.9%          C:\Program Files\nodejs\node.exe
+      1    0.1%          C:\WINDOWS\System32\KERNEL32.DLL
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.1%   11.1%  RegExp: ^((?:@[^/\\%]+\/)?[^./\\%][^/\\%]*)(\/.*)?$
+      1    0.1%   11.1%  LazyCompile: *resolve node:path:158:10
+      1    0.1%   11.1%  LazyCompile: *_storeHeader node:_http_outgoing:374:22
+      1    0.1%   11.1%  LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1    0.1%   11.1%  Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      1    0.1%   11.1%  Function: ^shouldDestroy C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express-session\index.js:435:27
+      1    0.1%   11.1%  Function: ^handleErrorFromBinding node:internal/fs/utils:341:32
+      1    0.1%   11.1%  Function: ^getEncodingOps node:buffer:679:24
+      1    0.1%   11.1%  Function: ^getColorDepth node:internal/tty:106:23
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      9    0.5%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+     13    0.7%  144.4%  GC
+   1901   99.5%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1443   75.5%  C:\WINDOWS\SYSTEM32\ntdll.dll
+     88    6.1%    C:\Program Files\nodejs\node.exe
+     27   30.7%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\cz\address\state_abbr.js:1:1
+     27  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+     27  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     27  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     10   11.4%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\pl\lorem\index.js:1:1
+     10  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+     10  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     10  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      4    4.5%      LazyCompile: ~x C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\cz\address\secondary_address.js:1:388
+      4  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\cz\address\secondary_address.js:1:1
+      4  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      4  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      4    4.5%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\name\last_name.js:1:1
+      4  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      4  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      4  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      LazyCompile: ~sha256.create C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\node-forge\lib\sha256.js:22:25
+      1  100.0%        LazyCompile: ~prng.create C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\node-forge\lib\prng.js:42:23
+      1  100.0%          LazyCompile: ~spawnPrng C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\node-forge\lib\random.js:76:19
+      1  100.0%            Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\node-forge\lib\random.js:30:10
+      1    1.1%      LazyCompile: ~processIncomingData C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\mongodb\lib\cmap\message_stream.js:84:29
+      1  100.0%        Function: ^_write C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\mongodb\lib\cmap\message_stream.js:31:11
+      1  100.0%          Function: ^writeOrBuffer node:internal/streams/writable:365:23
+      1  100.0%            Function: ^_write node:internal/streams/writable:283:16
+      1    1.1%      LazyCompile: ~pem.decode C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\node-forge\lib\pem.js:95:22
+      1  100.0%        LazyCompile: ~pki.privateKeyFromPem C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\node-forge\lib\pki.js:51:33
+      1  100.0%          LazyCompile: ~ServiceAccount C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\firebase-admin\lib\app\credential-internal.js:118:16
+      1  100.0%            LazyCompile: ~ServiceAccountCredential C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\firebase-admin\lib\app\credential-internal.js:65:16
+      1    1.1%      LazyCompile: ~p C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\id_ID\address\street.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\id_ID\address\street.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.1%      LazyCompile: ~p C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\en\animal\bear.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\en\animal\bear.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.1%      LazyCompile: ~getExportsForCircularRequire node:internal/modules/cjs/loader:733:38
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\tr\address\index.js:1:368
+      1  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\tr\address\index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\sk\name\index.js:1:368
+      1  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\sk\name\index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\sk\address\default_country.js:1:324
+      1  100.0%        LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\sk\address\index.js:1:368
+      1  100.0%          Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\sk\address\index.js:1:1
+      1  100.0%            LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\ro\address\postcode.js:1:324
+      1  100.0%        LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\ro\address\index.js:1:368
+      1  100.0%          Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\ro\address\index.js:1:1
+      1  100.0%            LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\company\index.js:1:368
+      1  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\company\index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\pl\name\last_name.js:1:324
+      1  100.0%        LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\pl\name\index.js:1:368
+      1  100.0%          Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\pl\name\index.js:1:1
+      1  100.0%            LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\ja\address\index.js:1:368
+      1  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\ja\address\index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\hu\name\prefix.js:1:324
+      1  100.0%        LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\hu\name\index.js:1:368
+      1  100.0%          Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\hu\name\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\fr_BE\internet\index.js:1:368
+      1  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\fr_BE\internet\index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\en_GB\address\index.js:1:368
+      1  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\en_GB\address\index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.1%      LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\az\commerce\product_name.js:1:324
+      1  100.0%        LazyCompile: ~get C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\az\commerce\index.js:1:368
+      1  100.0%          Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\az\commerce\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.1%      LazyCompile: ~g C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\de\word\preposition.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\de\word\preposition.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.1%      LazyCompile: ~f C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\ru\index.js:1:259
+      1  100.0%        LazyCompile: ~m C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\ru\index.js:1:432
+      1  100.0%          Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\ru\index.js:1:1
+      1  100.0%            LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.1%      LazyCompile: ~e C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\fr_CH\animal\index.js:1:259
+      1  100.0%        LazyCompile: ~r C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\fr_CH\animal\index.js:1:432
+      1  100.0%          Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\fr_CH\animal\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.1%      LazyCompile: ~b C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\cz\address\state_abbr.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\cz\address\state_abbr.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.1%      LazyCompile: ~addListener node:events:618:58
+      1  100.0%        LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:142:29
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:28:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.1%      LazyCompile: ~a C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\az\index.js:1:259
+      1  100.0%        LazyCompile: ~t C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\az\index.js:1:432
+      1  100.0%          Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\az\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.1%      LazyCompile: ~TLSSocket._wrapHandle node:_tls_wrap:596:43
+      1  100.0%        LazyCompile: ~TLSSocket node:_tls_wrap:464:19
+      1  100.0%          LazyCompile: ~connect node:_tls_wrap:1599:35
+      1  100.0%            LazyCompile: ~makeConnection C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\mongodb\lib\cmap\connect.js:256:24
+      1    1.1%      LazyCompile: ~Mongoose._model C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\mongoose\lib\index.js:609:37
+      1  100.0%        LazyCompile: ~Mongoose.model C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\mongoose\lib\index.js:538:36
+      1  100.0%          Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\DB\model\mongoDbModel.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.1%      LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%        LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\npmlog\log.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\finalhandler\index.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\modules\music\index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\zh_TW\name\first_name.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\tr\name\index.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\pt_PT\internet\index.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\nl_BE\name\index.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\lv\address\state.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\ko\index.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\fa\vehicle\index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\es_MX\address\index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\en\address\direction.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\@faker-js\faker\dist\cjs\locales\cz\internet\domain_suffix.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ^set maxAge C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express-session\session\cookie.js:83:13
+      1  100.0%        Function: ^resetMaxAge C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express-session\session\session.js:58:68
+      1  100.0%          Function: ^touch C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express-session\session\session.js:47:56
+      1  100.0%            Function: ^end C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express-session\index.js:250:27
+      1    1.1%      Function: ^Socket._writeGeneric node:net:791:42
+      1  100.0%        LazyCompile: ~Socket._writev node:net:823:36
+      1  100.0%          LazyCompile: ~doWrite node:internal/streams/writable:398:17
+      1  100.0%            LazyCompile: ~clearBuffer node:internal/streams/writable:529:21
+      1    1.1%      Function: ^<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\routes\infoRouter.js:12:21
+      1  100.0%        Function: ^handle C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          Function: ^next C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express\lib\router\route.js:116:16
+      1  100.0%            Function: ^dispatch C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express\lib\router\route.js:98:45
+      1    1.1%      C:\Program Files\nodejs\node.exe
+      1  100.0%        LazyCompile: ~<anonymous> C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\jsonwebtoken\node_modules\semver\classes\range.js:67:12
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            LazyCompile: ~format C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\jsonwebtoken\node_modules\semver\classes\range.js:65:10
+     49    3.4%    LazyCompile: *compileFunction node:vm:308:25
+     49  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     28   57.1%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+     28  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     26   92.9%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      2    7.1%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     21   42.9%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+     21  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     21  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+     16    1.1%    LazyCompile: *readFileSync node:fs:450:22
+     16  100.0%      Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     16  100.0%        LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      9   56.3%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      9  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      7   43.8%          LazyCompile: *Module.require node:internal/modules/cjs/loader:997:36
+      7  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+
+    457   23.9%  C:\Program Files\nodejs\node.exe
+    339   74.2%    C:\Program Files\nodejs\node.exe
+     63   18.6%      Function: ^compileFunction node:vm:308:25
+     63  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     63  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+     62   98.4%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.6%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     61   18.0%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     41   67.2%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     41  100.0%          Function: ^Socket._writeGeneric node:net:791:42
+     41  100.0%            Function: ^Socket._write node:net:828:35
+     20   32.8%        LazyCompile: *_write node:internal/streams/writable:283:16
+     20  100.0%          Function: ^Writable.write node:internal/streams/writable:333:36
+     20  100.0%            Function: ^value node:internal/console/constructor:258:20
+     27    8.0%      Function: ^realpathSync node:fs:2425:22
+     27  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+     26   96.3%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+     13   50.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+     11   42.3%            LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      1    3.8%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:338:20
+      1    3.8%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      1    3.7%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:848:35
+     23    6.8%      Function: ^closeSync node:fs:526:19
+     23  100.0%        Function: ^closeSync C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\graceful-fs\graceful-fs.js:72:24
+     18   78.3%          Function: ^readFileSync node:fs:450:22
+     18  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      5   21.7%          LazyCompile: *readFileSync node:fs:450:22
+      5  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     13    3.8%      Function: ^stat node:internal/modules/cjs/loader:151:14
+     10   76.9%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      8   80.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      6   75.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      2   25.0%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      2   20.0%          LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      2  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      3   23.1%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      3  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      3  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+     11    3.2%      Function: ^openSync node:fs:576:18
+     11  100.0%        Function: ^readFileSync node:fs:450:22
+     11  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      7   63.6%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      4   36.4%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      9    2.7%      C:\Program Files\nodejs\node.exe
+      1   11.1%        LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1   11.1%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   11.1%        Function: ^splitRoot node:fs:2375:33
+      1  100.0%          Function: ^realpathSync node:fs:2425:22
+      1  100.0%            Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1   11.1%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1   11.1%        Function: ^pipe C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\send\index.js:506:43
+      1  100.0%          Function: ^serveStatic C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\serve-static\index.js:72:31
+      1  100.0%            LazyCompile: *trim_prefix C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express\lib\router\index.js:293:23
+      1   11.1%        Function: ^header C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express\lib\response.js:777:29
+      1  100.0%          Function: ^contentType C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express\lib\response.js:619:32
+      1  100.0%            Function: ^send C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express\lib\response.js:111:25
+      1   11.1%        Function: ^expressInit C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express\lib\middleware\init.js:29:30
+      1  100.0%          Function: ^handle C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%            Function: ^trim_prefix C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\express\lib\router\index.js:293:23
+      1   11.1%        Function: ^asString C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\date-format\lib\index.js:29:18
+      1  100.0%          Function: ^timestampLevelAndCategory C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\log4js\lib\layouts.js:42:35
+      1  100.0%            Function: ^colouredLayout C:\Users\Tabare\Desktop\Full_Stack\Backend_40845\desafio13\node_modules\log4js\lib\layouts.js:73:24
+      1   11.1%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      7    2.1%      Function: ^readSync node:fs:684:18
+      5   71.4%        Function: ^tryReadSync node:fs:429:21
+      5  100.0%          Function: ^readFileSync node:fs:450:22
+      5  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      2   28.6%        LazyCompile: *readFileSync node:fs:450:22
+      2  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      2  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      4    1.2%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3   75.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1   33.3%          Function: ~<anonymous> node:tls:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   33.3%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   33.3%          Function: ~<anonymous> node:_http_client:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   25.0%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+     34    7.4%    LazyCompile: *compileFunction node:vm:308:25
+     34  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     18   52.9%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+     18  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     15   83.3%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      3   16.7%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     16   47.1%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+     16  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     16  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      5    1.1%    Function: ^realpathSync node:fs:2425:22
+      5  100.0%      Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      5  100.0%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      3   60.0%          LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      3  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2   40.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1   50.0%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      1   50.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+
